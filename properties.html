@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Browse Properties | HouseHunt</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="logo">
+HouseHunt
+</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="admin.html">Admin</a></li>
+<li><a href="renter.html">Renter</a></li>
+<li><a href="owner.html">Owner</a></li>
+<li><a href="wishlist.html">Wishlist</a></li>
+<li>
+<button id="themeToggle" class="theme-toggle">
+<i class="fa-solid fa-moon"></i>
+</button>
+</li>
+<li id="loginNav">
+<a href="login.html" class="login-btn">Login</a>
+</li>
+
+<li id="userNav" class="user-nav" style="display:none;">
+<div class="user-box">
+<span id="userName"></span>
+<button onclick="logoutUser()" class="logout-btn">
+Logout
+</button></div></li></ul></nav>
+</header>
+
+
+
+<!-- BROWSE PROPERTIES -->
+
+<section class="browse">
+
+<h1>Browse Properties</h1>
+
+<div class="filters">
+
+<input id="searchInput" placeholder="Search by city or title">
+
+<input id="priceFilter" type="number" placeholder="Max Price">
+
+<input id="roomFilter" type="number" placeholder="Min Rooms">
+
+<button onclick="searchProperties()">Search</button>
+
+</div>
+
+
+<div id="propertyContainer" class="property-grid"></div>
+
+</section>
+
+
+
+<script src="js/properties.js"></script>
+<script src="js/search.js"></script>
+
+
+<script>
+
+function displayProperties(list){
+
+const container = document.getElementById("propertyContainer");
+
+container.innerHTML = "";
+
+list.forEach(p => {
+
+container.innerHTML += `
+
+<div class="property-card">
+
+<div class="image-box">
+
+<img src="${p.image}">
+
+<button onclick="addToWishlist(${p.id})" class="wish-btn">
+ Wishlist
+</button>
+
+</div>
+
+<div class="property-info">
+
+<h3>${p.title}</h3>
+
+<p>${p.city}</p>
+
+<div class="property-price">
+₹${p.price.toLocaleString()}
+</div>
+
+<p>
+${p.rooms} BHK • ${p.area}
+</p>
+
+<a href="property.html?id=${p.id}" class="view-btn">
+View Details
+</a>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+displayProperties(properties);
+
+</script>
+
+<script src="js/search.js"></script>
+<script src="js/properties.js"></script>
+<script src ="js/wishlist.js"></script>
+<script src="js/main.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/user.js"></script>
+<script src="js/theme.js"></script>

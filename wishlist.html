@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Wishlist | Dream Homes</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="logo">
+HouseHunt
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="admin.html">Admin</a></li>
+<li><a href="renter.html">Renter</a></li>
+<li><a href="owner.html">Owner</a></li>
+<li><a href="wishlist.html">Wishlist</a></li>
+
+<li>
+<button id="themeToggle" class="theme-toggle">
+<i class="fa-solid fa-moon"></i>
+</button>
+</li>
+
+<li id="loginNav">
+<a href="login.html" class="login-btn">Login</a>
+</li>
+
+<li id="userNav" class="user-nav" style="display:none;">
+<div class="user-box">
+<span id="userName"></span>
+<button onclick="logoutUser()" class="logout-btn">
+Logout
+</button>
+</div>
+</li>
+
+</ul>
+</nav>
+
+
+
+<section class="wishlist-section">
+
+<h1>My Wishlist</h1>
+<p>Your saved dream properties</p>
+
+<div id="wishlistContainer" class="wishlist-grid"></div>
+
+<p id="emptyMessage">No properties saved yet</p>
+
+</section>
+
+
+<!-- JS FILES -->
+
+<script src="js/properties.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/user.js"></script>
+<script src="js/theme.js"></script>
+
+</body>
+</html>

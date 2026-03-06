@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard | HouseHunt</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="logo">
+HouseHunt
+</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="admin.html">Admin</a></li>
+<li><a href="renter.html">Renter</a></li>
+<li><a href="owner.html">Owner</a></li>
+<li><a href="wishlist.html">Wishlist</a></li>
+<li>
+<button id="themeToggle" class="theme-toggle">
+<i class="fa-solid fa-moon"></i>
+</button>
+</li>
+<li id="loginNav">
+<a href="login.html" class="login-btn">Login</a>
+</li>
+
+<li id="userNav" class="user-nav" style="display:none;">
+<div class="user-box">
+<span id="userName"></span>
+<button onclick="logoutUser()" class="logout-btn">
+Logout
+</button></div></li></ul></nav>
+</header>
+
+<section class="admin-panel">
+
+<h1>Admin Dashboard</h1>
+
+
+<!-- STATS -->
+
+<div class="admin-stats">
+
+<div class="stat-card">
+<h3 id="totalUsers">0</h3>
+<p>Total Users</p>
+</div>
+
+<div class="stat-card">
+<h3 id="totalProperties">0</h3>
+<p>Total Properties</p>
+</div>
+
+<div class="stat-card">
+<h3 id="totalBookings">0</h3>
+<p>Total Bookings</p>
+</div>
+
+</div>
+
+
+
+<!-- TABS -->
+
+<div class="admin-tabs">
+
+<button onclick="openAdminTab('usersTab')">Users</button>
+
+<button onclick="openAdminTab('propertiesTab')">Properties</button>
+
+<button onclick="openAdminTab('bookingsTab')">Bookings</button>
+
+</div>
+
+
+
+<!-- USERS -->
+
+<div id="usersTab" class="admin-tab">
+
+<h2>All Users</h2>
+
+<table>
+
+<thead>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Type</th>
+<th>Owner Permission</th>
+<th>Actions</th>
+</tr>
+
+</thead>
+
+<tbody id="usersTable"></tbody>
+
+</table>
+
+</div>
+
+
+
+<!-- PROPERTIES -->
+
+<div id="propertiesTab" class="admin-tab">
+
+<h2>All Properties</h2>
+
+<table>
+
+<thead>
+
+<tr>
+<th>ID</th>
+<th>Owner ID</th>
+<th>Type</th>
+<th>Ad Type</th>
+<th>Address</th>
+<th>Contact</th>
+<th>Price</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="propertiesTable"></tbody>
+
+</table>
+
+</div>
+
+
+
+<!-- BOOKINGS -->
+
+<div id="bookingsTab" class="admin-tab">
+
+<h2>All Bookings</h2>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Booking ID</th>
+<th>Owner ID</th>
+<th>Property ID</th>
+<th>Tenant ID</th>
+<th>Tenant Name</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="bookingsTable"></tbody>
+
+</table>
+
+</div>
+
+
+</section>
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

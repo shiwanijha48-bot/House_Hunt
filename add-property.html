@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Add Property | HouseHunt</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="logo">
+HouseHunt
+</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="admin.html">Admin</a></li>
+<li><a href="renter.html">Renter</a></li>
+<li><a href="owner.html">Owner</a></li>
+<li><a href="wishlist.html">Wishlist</a></li>
+<li>
+<button id="themeToggle" class="theme-toggle">
+<i class="fa-solid fa-moon"></i>
+</button>
+</li>
+<li id="loginNav">
+<a href="login.html" class="login-btn">Login</a>
+</li>
+
+<li id="userNav" class="user-nav" style="display:none;">
+<div class="user-box">
+<span id="userName"></span>
+<button onclick="logoutUser()" class="logout-btn">
+Logout
+</button></div></li></ul></nav>
+</header>
+
+
+
+<section class="add-property">
+<div class="form-wrapper">
+<h1>Add New Property</h1>
+<p class="subtitle">List your property and reach thousands of buyers</p>
+<form id="propertyForm">
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>Property Title</label>
+<input type="text" id="title" placeholder="Luxury 3BHK Apartment" required>
+</div>
+
+<div class="form-group">
+<label>City / Location</label>
+<input type="text" id="city" placeholder="Delhi, Mumbai, Bangalore" required>
+</div>
+
+<div class="form-group">
+<label>Price (₹)</label>
+<input type="number" id="price" required>
+</div>
+
+<div class="form-group">
+<label>Bedrooms</label>
+<input type="number" id="rooms">
+</div>
+
+<div class="form-group">
+<label>Area (sqft)</label>
+<input type="text" id="area">
+</div>
+
+<div class="form-group">
+<label>Property Type</label>
+
+<select id="type">
+<option>Apartment</option>
+<option>Villa</option>
+<option>Independent House</option>
+<option>Builder Floor</option>
+</select>
+
+</div>
+
+<div class="form-group">
+<label>Property Status</label>
+
+<select id="status">
+<option>For Sale</option>
+<option>For Rent</option>
+</select>
+
+</div>
+
+</div>
+
+
+<h2>Property Images</h2>
+
+<div class="form-group">
+<input type="file" id="images" multiple>
+<div id="preview"></div>
+</div>
+
+
+<h2>Property Description</h2>
+
+<textarea id="desc" rows="5" placeholder="Describe your property"></textarea>
+
+
+<h2>Amenities</h2>
+
+<div class="amenities">
+
+<label><input type="checkbox" value="Parking"> Parking</label>
+<label><input type="checkbox" value="Gym"> Gym</label>
+<label><input type="checkbox" value="Lift"> Lift</label>
+<label><input type="checkbox" value="Security"> Security</label>
+<label><input type="checkbox" value="Swimming Pool"> Swimming Pool</label>
+
+</div>
+
+
+<h2>Owner Details</h2>
+
+<div class="form-grid">
+
+<div class="form-group">
+<label>Owner Name</label>
+<input type="text" id="ownerName">
+</div>
+
+<div class="form-group">
+<label>Phone Number</label>
+<input type="text" id="ownerPhone">
+</div>
+
+<div class="form-group">
+<label>Email</label>
+<input type="email" id="ownerEmail">
+</div>
+
+<div class="form-group">
+<label>Full Address</label>
+<input type="text" id="address">
+</div>
+
+</div>
+
+<button type="submit" class="submit-btn">
+Upload Property
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<script src="js/add-property.js"></script>
+<script src="js/properties.js"></script>
+<script src="js/main.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/user.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/search.js"></script>
+<script src="js/properties.js"></script>
+<script src ="js/wishlist.js"></script>
+<script src="js/main.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/user.js"></script>
+<script src="js/theme.js"></script>
+
+
+</body>
+
+</html>
